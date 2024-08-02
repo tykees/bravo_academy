@@ -1,0 +1,101 @@
+.accord_main_container {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+
+}
+
+.accord_containner {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.accordion_h1 {
+    font-size: 22px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: 'poppins';
+    text-align: center;
+}
+
+.accordion_samp > .active {
+    display: block;
+    
+
+}
+
+.accordion_cont .inactive {
+    display: none;
+}
+
+.accordion_cont > div{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accordion_cont > div {
+ 
+   padding: 20px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  color: #000000;
+  }
+
+.accordion_title {
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 500px;
+}
+
+.accordion_cont_heading {
+    /* display: flex; */
+    justify-content: space-around;
+    /* align-items: center; */
+    /* text-align: left; */
+}
+
+.accordion_cont_heading .active {
+    color: #000000;
+}
+
+.accordion_cont_heading h3 {
+    color: #3b3a3a;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.accordion_cont p {
+    margin: 0;
+    padding-bottom: 30px;
+    color: #3b3a3a;
+    line-height: 1.4;
+}
+
+.verti {
+    float: right;
+    margin-top: -1.2rem;
+    font-weight: 800;
+
+ }
+
+ @media screen  and (max-width: 600px){
+
+    .accordion_cont > div {
+      padding: 20px;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: #000000;
+      }
+    
+.accord_containner {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+ }
