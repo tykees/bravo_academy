@@ -17,7 +17,7 @@ import { gql, request } from 'graphql-request'
           }
           sourceCode
           free
-          chapterList {
+          chapterLists {
             ... on Chapter {
               id
               name
@@ -48,23 +48,58 @@ import { gql, request } from 'graphql-request'
             description
             totalChapter
             slug
-            chapterList {
-              ... on Chapter {
-                id
-                name
-                tutVideo {
-                  url
+            chapterLists {
+                ... on Chapter {
+                  id
+                  name
+                  tutVideo {
+                    url
+                  }
                 }
               }
             }
           }
-        }
      `
      const result = await request(MASTER_URL, query);
      return result;
  }
 
+ const enrollToCourse= async(courseId, email,)=> {
+  const query=gql`
+  mutation MyMutation {
+    createUserEnrollCourse(
+      data: {courseId: "`+courseId+`", userEmail: "`+email+`", courseList: {connect: {slug: "`+courseId+`"}}}
+    ) {
+      id
+    }
+    publishManyUserEnrollCoursesConnection {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+  `
+  const result = await request(MASTER_URL, query);
+  return result;
+ }
+
+ const checkUserEnrolledToCourses= async (courseId, email)=> {
+  const query=gql`
+  query MyQuery {
+    userEnrollCourses(where: {courseId: "`+courseId+`", userEmail: "`+email+`"}) {
+      id
+    }
+  }
+  `
+  const result = await request(MASTER_URL, query);
+  return result;
+ }
+
  export default {
     getAllCourseList,
-    getCourseBySlug
+    getCourseBySlug,
+    enrollToCourse,
+    checkUserEnrolledToCourses
  }

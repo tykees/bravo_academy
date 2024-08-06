@@ -12,7 +12,6 @@ function CourseList() {
 
     const getAllCourses=()=> {
         GlobalApi.getAllCourseList().then(resp=>{
-            console.log(resp)
             setCourseList(resp?.courseLists)
         })
     }
