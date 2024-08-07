@@ -97,9 +97,45 @@ import { gql, request } from 'graphql-request'
   return result;
  }
 
+ const getUserEnrolledCourseDetails= async (email,id)=>{
+  const query =gql`
+  query MyQuery {
+    userEnrollCourses(where: {userEmail: "`+email+`", id: "`+id+`"}) {
+      id
+      courseId
+      userEmail
+      courseList {
+        name
+        banner {
+          url
+        }
+        chapterLists {
+          ... on Chapter {
+            id
+            name
+            tutVideo {
+              url
+            }
+          }
+        }
+        description
+        free
+        id
+        slug
+        sourceCode
+        totalChapter
+      }
+    }
+  }
+  `
+  const result = await request(MASTER_URL, query);
+  return result;
+ }
+
  export default {
     getAllCourseList,
     getCourseBySlug,
     enrollToCourse,
-    checkUserEnrolledToCourses
+    checkUserEnrolledToCourses,
+    getUserEnrolledCourseDetails
  }

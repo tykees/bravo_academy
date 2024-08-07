@@ -80,7 +80,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-sky-500 border border-sky-500 baseline hover:bg-blue-400" href={'/enrol'}>Register</Link>
+            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-sky-500 border border-sky-500 baseline hover:bg-blue-400" href={'/sign-up'}>Register</Link>
           </li>
         </ul>
       )}
@@ -112,7 +112,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-white bg-blue-600 border rounded-lg baseline hover:bg-blue-400" href={'/enrol'} onClick={handleMenuClick}>Get Started </Link>
+            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-white bg-blue-600 border rounded-lg baseline hover:bg-blue-400" href={'/sign-up'} onClick={handleMenuClick}>Get Started </Link>
           </li>
           </ul>
         </div>

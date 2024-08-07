@@ -7,7 +7,7 @@ function CourseItem({course}) {
         <Image src={course?.banner?.url} width={500} height={200} alt="Banner" className='rounded-t-xl'/>
         <div className='flex flex-col gap-1 p-2'>
         <h2 className='font-semibold'>{course.name}</h2>
-       {course?.chapter?.length===0 ? <div className='flex gap-2'>
+       {course?.chapterLists?.length===0 ? <div className='flex gap-2'>
         <Image src='/youtube.png' width={20} height={20} alt="Youtube"/>
         <h2 className='text-[14px] text-gray-400'>Watch on YouTube</h2>
         </div>:
