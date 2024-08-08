@@ -16,7 +16,7 @@ function ViewCourse({params}) {
     },[params&&user])
     // Get user enrolled Course
     const getUserEnrolledCourseDetail=()=>{
-        GlobalApi.getUserEnrolledCourseDetails(user.primaryEmailAddress.emailAddress, params.enrollId, ).then(resp=>{
+        GlobalApi.getUserEnrolledCourseDetails(user?.primaryEmailAddress.emailAddress, params?.enrollId, ).then(resp=>{
             setCourseInfo(resp.userEnrollCourses[0].courseList);
         })
     }

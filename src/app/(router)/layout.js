@@ -1,14 +1,18 @@
 import React from 'react'
 import SideNav from './_components/SideNav';
 import Header from './_components/Header';
+import Navbar from '@/components/Navbar/Navbar';
+
+
 
 function layout({children}) {
   return (
     <div className=''>
-        <div className='sm:w-64 sm:block fixed'>
+      {/* <Navbar/> */}
+        <div className='sm:w-64 md:visible invisible sm:block fixed'>
             <SideNav/>
         </div>
-        <div className='ml-64'>
+        <div className='md:ml-64 ml-0'>
             <Header/>
         {children}
         </div>

@@ -8,9 +8,10 @@ function CourseContent({courseInfo, isUserAlreadyEnrolled, viewMode=false, setAc
         <h2>Contents</h2>
         {courseInfo?.chapterLists.map((item, index)=>(
             <div>
-                <h2 className={`p-2 text-[14px] flex justify-between items-center m-2 hover:bg-gray-200 border rounded-sm px-4 cursor-pointer ${activeIndex==index&&'bg-primary text-white'}
-                ${isUserAlreadyEnrolled&&'hover:bg-black hover:text-white'}`}
-                onClick={()=>viewMode&&setActiveChapterIndex(index)}
+                <h2 className={`p-2 text-[14px] flex justify-between items-center m-2 hover:bg-primary border rounded-sm px-4 cursor-pointer ${activeIndex==index&&'bg-primary text-white'}
+                ${isUserAlreadyEnrolled&&'hover:primary hover:text-white'}`}
+                onClick={()=>{viewMode&&setActiveChapterIndex(index),
+                  setActiveIndex(index)}}
                 >
                 {index+1}. {item.name}
                 {activeIndex==index||isUserAlreadyEnrolled?

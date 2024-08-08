@@ -26,11 +26,11 @@ function CoursePreview({params}) {
 
     // Checking User enrollment
      const checkUserEnrolledCourses = ()=>{
-        GlobalApi.checkUserEnrolledToCourses(courseInfo?.slug, user.primaryEmailAddress.emailAddress).then(resp=>{
-            console.log("en?"+resp)
+        GlobalApi.checkUserEnrolledToCourses(courseInfo?.slug, user?.primaryEmailAddress?.emailAddress).then(resp=>{
+            console.log(resp)
 
             if(resp?.userEnrollCourses){
-                console.log("enrolled?"+resp)
+                console.log(resp)
                 setIsUserAlreadyEnrolled(resp?.userEnrollCourses[0]?.id);
             }
         })

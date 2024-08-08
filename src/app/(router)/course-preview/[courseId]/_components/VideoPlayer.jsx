@@ -6,10 +6,11 @@ function VideoPlayer({videoUrl, poster}) {
     width={1000}
     height={250}
     controls
+    key={videoUrl}
     className='rounded-sm'
-    src={videoUrl} type='video/mp4'
     poster={poster}
     >
+      <source src={videoUrl} type='video/mp4' />
     </video>
   )
 }

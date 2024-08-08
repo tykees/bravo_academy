@@ -14,18 +14,18 @@ function CourseEnroll({courseInfo, isUserAlreadyEnrolled}) {
     const router = useRouter();
 
     useEffect(()=>{
-      console.log("courseEnrolled="+ isUserAlreadyEnrolled)
+      isUserAlreadyEnrolled
     },[])
 
     const onEnrollCourse=()=>{
-      GlobalApi.enrollToCourse(courseInfo?.slug, user?.primaryEmailAddress.emailAddress).then(resp=>{
+      GlobalApi.enrollToCourse(courseInfo?.slug, user?.primaryEmailAddress?.emailAddress).then(resp=>{
         console.log(resp);
 
         if(resp)
         {
           //Show message
-          toast("Event has been created", {
-            description: "Sunday, December 03, 2023 at 9:00 AM",
+          toast("Your have successfully Enrolled", {
+            description: "Happy Learning!",
           })
           //Watch Course
           router.push('/view-course/'+resp.createUserEnrollCourse.id)

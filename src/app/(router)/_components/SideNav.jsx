@@ -45,8 +45,7 @@ const SideNav = () => {
     },[])
   return (
     <div className='p-5 bg-white shadow-sm border h-screen'>
-        {/* <Image src='/udemy.png' alt="logo" width={100} height={80} /> */}
-        <h2 className='text-2xl font-extrabold'>Bravo Edutech</h2>
+        <Image src='/bravo.png' alt="logo" width={200} height={80} />
         <hr className='mt-7'></hr>
         {/* {Menu List} */}
         <div className='mt-5'>

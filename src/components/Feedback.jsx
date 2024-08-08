@@ -27,7 +27,7 @@ const Feedback = () => {
                     <IoStarOutline />
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam ratione commodi provident adipisci.</p>
+                <p>Bravo Academy isn't just an online school; it's a gateway to limitless potential. This platform seamlessly merges technology with teaching, making learning an exciting adventure. It's like having a world-class tutor at your fingertips. Whether you're a student or a lifelong learner, Bravo Academy offers something for everyone. It's more than education; it's empowerment.</p>
                 <div className='flex mt-5'>
                     <Image className='w-[50px] rounded-3xl' src={Emma}/>
                     <div className='ml-3'>
