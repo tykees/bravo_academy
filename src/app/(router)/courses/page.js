@@ -14,9 +14,9 @@ const Courses = () => {
             <CourseList/>
         </div>
         {/* Right Container */}
-        <div>
+        {/* <div>
             Right Section
-        </div>
+        </div> */}
     </div>
   )
 }

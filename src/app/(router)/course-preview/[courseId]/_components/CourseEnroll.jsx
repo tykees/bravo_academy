@@ -28,7 +28,7 @@ function CourseEnroll({courseInfo, isUserAlreadyEnrolled}) {
             description: "Happy Learning!",
           })
           //Watch Course
-          router.push('/view-course/'+resp.createUserEnrollCourse.id)
+          router.push('/view-course/'+resp?.createUserEnrollCourse?.id)
 
         }
       })

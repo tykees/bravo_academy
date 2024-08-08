@@ -7,7 +7,7 @@ function CourseContent({courseInfo, isUserAlreadyEnrolled, viewMode=false, setAc
     <div className='p-3 bg-white rounded-sm mt-3'>
         <h2>Contents</h2>
         {courseInfo?.chapterLists.map((item, index)=>(
-            <div>
+            <div key={index}>
                 <h2 className={`p-2 text-[14px] flex justify-between items-center m-2 hover:bg-primary border rounded-sm px-4 cursor-pointer ${activeIndex==index&&'bg-primary text-white'}
                 ${isUserAlreadyEnrolled&&'hover:primary hover:text-white'}`}
                 onClick={()=>{viewMode&&setActiveChapterIndex(index),

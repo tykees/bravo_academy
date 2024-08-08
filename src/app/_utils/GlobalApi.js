@@ -97,10 +97,10 @@ import { gql, request } from 'graphql-request'
   return result;
  }
 
- const getUserEnrolledCourseDetails= async (email,id)=>{
+ const getUserEnrolledCourseDetails= async (email,courseId)=>{
   const query =gql`
   query MyQuery {
-    userEnrollCourses(where: {userEmail: "`+email+`", id: "`+id+`"}) {
+    userEnrollCourses(where: {userEmail: "`+email+`", id: "`+courseId+`"}) {
       id
       courseId
       userEmail

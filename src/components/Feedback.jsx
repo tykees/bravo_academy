@@ -27,7 +27,7 @@ const Feedback = () => {
                     <IoStarOutline />
                     </div>
                 </div>
-                <p>Bravo Academy isn't just an online school; it's a gateway to limitless potential. This platform seamlessly merges technology with teaching, making learning an exciting adventure. It's like having a world-class tutor at your fingertips. Whether you're a student or a lifelong learner, Bravo Academy offers something for everyone. It's more than education; it's empowerment.</p>
+                <p>Bravo Academy isn&apos;t just an online school; it&apos;s a gateway to limitless potential. This platform seamlessly merges technology with teaching, making learning an exciting adventure. It&apos;s like having a world-class tutor at your fingertips. Whether you&apos;re a student or a lifelong learner, Bravo Academy offers something for everyone. It&apos;s more than education; it&apos;s empowerment.</p>
                 <div className='flex mt-5'>
                     <Image className='w-[50px] rounded-3xl' src={Emma}/>
                     <div className='ml-3'>
@@ -47,7 +47,7 @@ const Feedback = () => {
                     <IoStarOutline />
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquam ratione commodi provident adipisci.</p>
+                <p>Bravo Academy is a goldmine of knowledge! The courses are well-structured, engaging, and packed with practical information. I&apos;ve learned so much and already applied the skills to my job. Highly recommend!</p>
                 <div className='flex mt-5'>
                     <Image className='w-[50px] rounded-2xl' src={Yusuf}/>
                     <div className='ml-3'>

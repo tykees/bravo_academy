@@ -16,11 +16,12 @@ function ViewCourse({params}) {
     },[params&&user])
     // Get user enrolled Course
     const getUserEnrolledCourseDetail=()=>{
-        GlobalApi.getUserEnrolledCourseDetails(user?.primaryEmailAddress.emailAddress, params?.enrollId, ).then(resp=>{
-            setCourseInfo(resp.userEnrollCourses[0].courseList);
+        GlobalApi.getUserEnrolledCourseDetails( user?.primaryEmailAddress?.emailAddress, params.enrollId).then(resp=>{
+            console.log(resp)
+            setCourseInfo(resp?.userEnrollCourses[0]?.courseList);
         })
     }
-  return courseInfo.name&&(
+  return courseInfo?.name&&(
     <div>
          <div className='grid grid-cols-1 md:grid-cols-3 p-5 gap-3'>
         {/* Title */}
