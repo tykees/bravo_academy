@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import './navbar.css';
-// import Logo from '../../public/replendent.png';
 
 
 
@@ -41,8 +40,7 @@ const Navbar = () => {
     <nav className="navbar shadow-sm">
       <div className="logo">
         <Link href={'/'} className="links w-[50px]">
-          <p className='w-[200px] text-xl font-bold'>BRAVO EDUTECH</p>
-          {/* <Image className='w-[120px]' src={''} alt="" /> */}
+          <Image className='' src={'/bravo.png'} width={200} height={200} alt="" />
         </Link>
       </div>
 
@@ -60,13 +58,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={'/#subjects'} className="links">
+            <Link href={'/courses'} className="links">
               Courses
-            </Link>
-          </li>
-          <li>
-            <Link href={'/about'} className="links">
-              Deals
             </Link>
           </li>
           <li>
@@ -75,8 +68,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={'/join'} className="links">
-              About
+            <Link href={'/sign-in'} className="text-blue-900">
+              Login
             </Link>
           </li>
           <li>
