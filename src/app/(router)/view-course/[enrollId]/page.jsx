@@ -14,13 +14,14 @@ function ViewCourse({params}) {
     useEffect(()=>{
         params&&user&&getUserEnrolledCourseDetail();
     },[params&&user])
-    // Get user enrolled Course
+   // Get user enrolled Course
     const getUserEnrolledCourseDetail=()=>{
-        GlobalApi.getUserEnrolledCourseDetails( user?.primaryEmailAddress?.emailAddress, params.enrollId).then(resp=>{
+        GlobalApi.getUserEnrolledCourseDetails(user?.primaryEmailAddress?.emailAddress, params?.enrollId).then(resp=>{
             console.log(resp)
             setCourseInfo(resp?.userEnrollCourses[0]?.courseList);
         })
     }
+       
   return courseInfo?.name&&(
     <div>
          <div className='grid grid-cols-1 md:grid-cols-3 p-5 gap-3'>

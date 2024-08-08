@@ -90,22 +90,22 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href={'/#subjects'} className="links font-normal text-2xl" onClick={handleMenuClick}>
-                Subjects
+              <Link href={'/courses'} className="links font-normal text-2xl" onClick={handleMenuClick}>
+                Courses
               </Link>
             </li>
             <li>
-              <Link href={'/about'} className="links font-normal text-2xl" onClick={handleMenuClick}>
-                Why Resplendent Tutors?
+              <Link href={'/'} className="links font-normal text-2xl" onClick={handleMenuClick}>
+                About
               </Link>
             </li>
             <li>
-              <Link href={'/join'} className="links font-normal text-2xl" onClick={handleMenuClick}>
-                Join Us
+              <Link href={'/sign-in'} className="links font-normal text-2xl" onClick={handleMenuClick}>
+                Login
               </Link>
             </li>
             <li>
-            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-white bg-blue-600 border rounded-lg baseline hover:bg-blue-400" href={'/sign-up'} onClick={handleMenuClick}>Get Started </Link>
+            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-white bg-blue-600 border rounded-lg baseline hover:bg-blue-400" href={'/sign-up'} onClick={handleMenuClick}>Sign Up </Link>
           </li>
           </ul>
         </div>
