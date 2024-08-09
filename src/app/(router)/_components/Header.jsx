@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import React from 'react';
 import { UserButton, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import MobileMenu from '../courses/_components/MobileMenu';
 
 function Header() {
     const {user, isLoaded} = useUser();
   return (
+    <>
     <div className='p-4 bg-white flex justify-between'>
         {/* Search Bar */}
         <div className='flex gap-2 border p-2 rounded-md'>
@@ -19,10 +21,12 @@ function Header() {
            {isLoaded&&user? <UserButton/>
           : 
           <Link href={'/sign-in'}>
-            <Button>Get Started</Button>
+            <Button className="text-white">Get Started</Button>
           </Link>}
         </div>
     </div>
+    <MobileMenu/>
+    </>
   )
 }
 

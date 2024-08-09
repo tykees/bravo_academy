@@ -2,6 +2,7 @@
 import React from 'react'
 import CourseList from './_components/CourseList';
 import HomeBanner from './_components/HomeBanner';
+import MobileMenu from './_components/MobileMenu';
 
 const Courses = () => {
   return (

@@ -30,7 +30,6 @@ function CoursePreview({params}) {
             console.log(resp)
 
             if(resp?.userEnrollCourses){
-                console.log(resp)
                 setIsUserAlreadyEnrolled(resp?.userEnrollCourses[0]?.id);
             }
         })

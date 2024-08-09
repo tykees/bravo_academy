@@ -64,26 +64,26 @@ import { gql, request } from 'graphql-request'
      return result;
  }
 
- const enrollToCourse= async(courseId, email,)=> {
-  const query=gql`
-  mutation MyMutation {
-    createUserEnrollCourse(
-      data: {courseId: "`+courseId+`", userEmail: "`+email+`", courseList: {connect: {slug: "`+courseId+`"}}}
-    ) {
-      id
-    }
-    publishManyUserEnrollCoursesConnection {
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-  `
-  const result = await request(MASTER_URL, query);
-  return result;
- }
+//  const enrollToCourse= async(courseId, email,)=> {
+//   const query=gql`
+//   mutation MyMutation {
+//     createUserEnrollCourse(
+//       data: {courseId: "`+courseId+`", userEmail: "`+email+`", courseList: {connect: {slug: "`+courseId+`"}}}
+//     ) {
+//       id
+//     }
+//     publishManyUserEnrollCoursesConnection {
+//       edges {
+//         node {
+//           id
+//         }
+//       }
+//     }
+//   }
+//   `
+//   const result = await request(MASTER_URL, query);
+//   return result;
+//  }
 
  const checkUserEnrolledToCourses= async (courseId, email)=> {
   const query=gql`
@@ -135,7 +135,7 @@ import { gql, request } from 'graphql-request'
  export default {
     getAllCourseList,
     getCourseBySlug,
-    enrollToCourse,
+    // enrollToCourse,
     checkUserEnrolledToCourses,
     getUserEnrolledCourseDetails
  }
