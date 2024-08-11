@@ -16,7 +16,7 @@ function CourseItem({course}) {
         <h2 className='text-[14px] text-gray-400'>Chapter</h2>
         </div>}
         <h2 className='text-[15px]'>{course?.free?'Free': 'Paid'}</h2>
-        </div>
+      </div>
     </div>
   )
 }

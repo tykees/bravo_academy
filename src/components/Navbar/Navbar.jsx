@@ -73,7 +73,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-sky-500 border border-sky-500 baseline hover:bg-blue-400" href={'/sign-up'}>Register</Link>
+            <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-sky-500 border border-sky-500 baseline hover:text-white hover:bg-blue-400" href={'/sign-up'}>Register</Link>
           </li>
         </ul>
       )}

@@ -1,15 +1,21 @@
 import { Lock, Play } from 'lucide-react'
 import React, {useState} from 'react'
 
-function CourseContent({courseInfo, isUserAlreadyEnrolled, viewMode=false, setActiveChapterIndex}) {
+function CourseContent({courseInfo, isUserAlreadyEnrolled, viewMode=false, setActiveChapterIndex, completedChapter}) {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const checkIfChapterIsCompleted = (chapterId)=>{
+      return completedChapter.find(item =>item.chapterId==chapterId)
+    }
   return (
     <div className='p-3 bg-white rounded-sm mt-3'>
         <h2>Contents</h2>
         {courseInfo?.chapterLists.map((item, index)=>(
             <div key={index}>
-                <h2 className={`p-2 text-[14px] flex justify-between items-center m-2 hover:bg-primary border rounded-sm px-4 cursor-pointer ${activeIndex==index&&'bg-primary text-white'}
-                ${isUserAlreadyEnrolled&&'hover:primary hover:text-white'}`}
+                <h2 className={`p-2 text-[14px] flex justify-between items-center m-2 hover:bg-primary border rounded-sm px-4 cursor-pointer 
+                ${activeIndex==index&&'bg-primary text-white'}
+                ${isUserAlreadyEnrolled&&'hover:primary hover:text-white'}
+                ${viewMode&&checkIfChapterIsCompleted(item.id)&&'border-teal-600 bg-teal-300'}`}
                 onClick={()=>{viewMode&&setActiveChapterIndex(index),
                   setActiveIndex(index)}}
                 >

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import Pix from '../../public/stu.jpg';
+import Link from 'next/link';
 
 const Explore = () => {
   return (
@@ -27,7 +28,7 @@ const Explore = () => {
                     <p>Online Course</p>
                     </div>
                 </div>
-                <div className='mt-10'><button className='text-white bg-sky-500  w-[200px] rounded-xl h-[50px]'>See more courses</button></div>
+                <div className='mt-10'> <Link href={'/coures'}> <button className='text-white bg-sky-500  w-[200px] h-[50px]'>See more courses</button></Link></div>
             </div>
         </div>
     </div>

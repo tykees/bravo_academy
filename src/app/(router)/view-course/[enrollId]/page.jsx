@@ -4,12 +4,14 @@ import { useUser } from '@clerk/nextjs'
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { toast } from 'sonner';
 import CourseContent from '../../course-preview/[courseId]/_components/CourseContent';
 import CourseDescription from '../../course-preview/[courseId]/_components/CourseDescription';
 
 function ViewCourse({params}) {
     const {user} = useUser();
     const [courseInfo, setCourseInfo] = useState([]);
+    const [completedChapter, setCompletedChapter] = useState([])
     const [activeChapterIndex, setActiveChapterIndex] = useState(0);
     useEffect(()=>{
         params&&user&&getUserEnrolledCourseDetail();
@@ -18,8 +20,20 @@ function ViewCourse({params}) {
     const getUserEnrolledCourseDetail=()=>{
         GlobalApi.getUserEnrolledCourseDetails(user?.primaryEmailAddress?.emailAddress, params?.enrollId).then(resp=>{
             console.log(resp)
-            
+            setCompletedChapter(resp?.userEnrollCourses[0]?.completedChapter);
             setCourseInfo(resp?.userEnrollCourses[0]?.courseList);
+        })
+    }
+
+    // Saving completed chapter
+    const onChapterComplete = (chapterId)=> {
+        GlobalApi.markChapterCompleted(params.enrollId, chapterId).then(resp=>{
+            console.log(resp)
+
+            if(resp){
+                toast("Course Completed Successfully!")
+                getUserEnrolledCourseDetail();
+            }
         })
     }
        
@@ -31,6 +45,7 @@ function ViewCourse({params}) {
              <CourseDescription courseInfo={courseInfo}
              activeChapterIndex={activeChapterIndex}
              viewMode={true}
+             setChapterCompleted={(chapterId)=>onChapterComplete(chapterId)}
              />
          </div>
        
@@ -39,6 +54,7 @@ function ViewCourse({params}) {
             <CourseContent courseInfo={courseInfo}
             isUserAlreadyEnrolled={true}
             viewMode={true}
+            completedChapter={completedChapter}
             setActiveChapterIndex={(index)=>setActiveChapterIndex(index)}
             />
         </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Ready = () => {
@@ -9,7 +10,7 @@ const Ready = () => {
                 <p className='mt-4 w-[180px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, illum.</p>
             </div>
             <div className='text-center mt-10'>
-                <button className='text-white bg-sky-500 w-[150px]  md:w-[200px] rounded-md h-[50px]'>See more courses</button>
+               <Link href={'./courses'}> <button className='text-white bg-sky-500 w-[150px]  md:w-[200px] rounded-md h-[50px]'>See more courses</button></Link>
             </div>
         </div>
     </div>
