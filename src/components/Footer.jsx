@@ -11,7 +11,7 @@ const Footer = () => {
     <div className='bg-slate-950 mt-60'>
         <div className='h-[400px]'>
             <h1 className='text-slate-300 text-center text-4xl font-bold pt-20'>Bravo Academy</h1>
-            <p className='text-center mt-5 text-slate-300'>We are here to serve and set you right for the future.<br/> Don't give up on your dreams.</p>
+            <p className='text-center mt-5 text-slate-300'>We are here to serve and set you right for the future.<br/> Don&apos;t give up on your dreams.</p>
             <div className='flex mt-4 text-slate-300 justify-center items-center gap-5'>
                 <p>Privacy</p>|<p>Term of Service</p>
             </div>
