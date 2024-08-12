@@ -13,7 +13,7 @@ const Feedback = () => {
     <div className='container mx-auto'>
         <div>
             <h1 className='text-center mt-20 text-3xl font-bold'>Some Students Feedback</h1>
-         <div className='flex justify-center items-center'><p className='mt-4 w-[400px] text-slate-300'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam itaque aperiam nesciunt.</p></div> 
+         <div className='flex justify-center items-center'><p className='mt-4 w-[400px] text-center text-slate-300'>Some of our students have something to say.</p></div> 
         </div>
         <div className='flex mt-20 justify-around items-center flex-wrap'>
             <div className='col_1 md:w-1/2 border px-10 py-10'>

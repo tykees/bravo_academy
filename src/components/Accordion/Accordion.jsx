@@ -4,28 +4,28 @@ import './accordion.css';
 
 const dataCollection = [
     {
-        question: 'Projects Investment Reward',
+        question: 'How do I access the courses?',
 
-        answer: ' Decentrabuilds will support projects that are building on web3 based on the decison through voting of the community and token holders. The projects we fund will have the obligation to support the investors($DBUILDS token holders) at the successful launch of the their project and token. The token received from the dapps will be distributed to all the people that participated in the voting round in proprotion to the $DBUILDS token they locked. There is a vesting period of 4 months for the token to be distributed to all holders. ',
+        answer: 'Courses are accessible online through our platform. Simply log in and start learning. ',
     },
 
     {
-        question: 'Lottery Reward',
-        answer: ' Lottery reward is an engaging system to distribute reward from a pool. Ticket will be sold to participants and the lucky people wins the reward. Read the Litepaper for more info',
+        question: 'Can I learn at my own pace?',
+        answer: 'Yes, our platform allows for self-paced learning. Learn anytime, anywhere!',
     },
 
     {
-        question: 'Locking Reward',
-        answer: ' Locking tokens allows you to participate in the voting rounds for projects which gives you back the reward through your votes and you also earn: 30days(12%APR), 90days(28%APR), 180days(58%APY) and 360days(88%APR).',
+        question: 'Are there any prerequisites for the courses?',
+        answer: ' Some courses may have prerequisites. Check the course description for details.',
     },
 
     {
-        question: 'Token burning ',
-        answer: '  of the tokens in lottery will be burnt. 90% of BNB generated through vote will be used to buy back and burn.',
+        question: 'Can I get certified upon completion?',
+        answer: ' Yes, we offer certification upon successful completion of select courses and programs.',
     },
     {
-        question: 'Governance',
-        answer: ' LDS tokens gives access to join the decision makers in the ecosystem.',
+        question: `'How do I get support if I'm struggling with a course?'`,
+        answer: ' Reach out to our support team through the platform, email, or live chat.',
     },
 
 ];
@@ -49,7 +49,7 @@ const Accord = () => {
         <div className='accordion_h1'>
             <span className='accordion_title'></span>
             <h1 className='font-bold text-5xl'>Frequently Asked Questions</h1>
-            <p className='mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat id dolorum?</p>
+            <p className='mt-5 text-[16px]'>Some of our student have something to say.</p>
         
         </div>
         <div className='accordion_cont'>

@@ -78,8 +78,8 @@ const Successful = () => {
   return (
     <div className='lg:container mx-auto mt-20'>
         <div>
-            <h1 className='text-3xl font-bold'>Meet Our Succeesfull <br/> Team</h1>
-            <p className='my-5 w-[400px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sunt, porro expedita in dolorem nemo cumque.</p>
+            <h1 className='text-3xl font-bold'>Meet Our Succeesful<br/> Team</h1>
+            <p className='my-5 w-[400px]'>Active members of the project.</p>
         </div>
         <div className='flex justify-center items-center flex-wrap lg:m-5 md:m-1 text-center'>
         {successfulStudent.map((item, index)=>(

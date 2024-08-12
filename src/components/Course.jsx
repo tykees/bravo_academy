@@ -62,7 +62,7 @@ const Course = () => {
         <div>
             <div>
                 <h1 className='text-center text-4xl mt-36 font-bold'>Discover Our Popular <br/> Courses</h1>
-              <div className='flex my-10 justify-center items-center'><p className='text-slate-400 text-center w-[500px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditat sit dolorem esse.</p></div> 
+              <div className='flex my-8 justify-center items-center'><p className='text-slate-400 text-center w-[500px]'>We have the best courses to set you better for the future. Our courses are we crafted to drive you from zero to hero.</p></div> 
             </div>
             <div className=" flex container mx-auto">
                 <div className="md:grid grid-cols-2">

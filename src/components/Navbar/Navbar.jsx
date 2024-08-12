@@ -63,16 +63,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={'/join'} className="links">
-              Success
-            </Link>
-          </li>
-          <li>
-            <Link href={'/sign-in'} className="text-blue-900">
+            <Link href={'/sign-in'} className="text-sky-600">
               Login
             </Link>
           </li>
-          <li>
+          <li className=''>
             <Link className="p-3 ml-20 flex justify-end px-6 pt-2 text-sky-500 border border-sky-500 baseline hover:text-white hover:bg-blue-400" href={'/sign-up'}>Register</Link>
           </li>
         </ul>
@@ -92,11 +87,6 @@ const Navbar = () => {
             <li>
               <Link href={'/courses'} className="links font-normal text-2xl" onClick={handleMenuClick}>
                 Courses
-              </Link>
-            </li>
-            <li>
-              <Link href={'/'} className="links font-normal text-2xl" onClick={handleMenuClick}>
-                About
               </Link>
             </li>
             <li>
